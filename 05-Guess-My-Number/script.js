@@ -15,7 +15,6 @@ const displayMessage = function (message) {
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
   // When there is no input
   if (!guess) {
     // document.querySelector('.message').textContent = '⛔️ No number!';
@@ -45,4 +44,16 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+
+// Reseting the game -> Again Button
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  displayMessage('Start guessing...');
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
 });
