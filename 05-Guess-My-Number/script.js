@@ -31,18 +31,9 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      displayMessage('📈 Too High!');
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      displayMessage('💥 You lost the game!');
-      document.querySelector('.score').textContent = 0;
-    }
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      displayMessage('📉 Too Low!');
+      displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -50,6 +41,25 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+  //   else if (guess > secretNumber) {
+  //     if (score > 1) {
+  //       displayMessage('📈 Too High!');
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       displayMessage('💥 You lost the game!');
+  //       document.querySelector('.score').textContent = 0;
+  //     }
+  //   } else if (guess < secretNumber) {
+  //     if (score > 1) {
+  //       displayMessage('📉 Too Low!');
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       displayMessage('💥 You lost the game!');
+  //       document.querySelector('.score').textContent = 0;
+  //     }
+  //   }
 });
 
 // Reseting the game -> Again Button
