@@ -43,5 +43,17 @@ const restaurant = {
 };
 
 // Recieve 2 values from a function and use destructuring to store them.
-const [starter, main] = restaurant.order(2, 0);
-console.log(starter, main);
+// const [starter, main] = restaurant.order(2, 0);
+// console.log(starter, main);
+
+// Nested Destructuring
+// const nested = [1, 2, [3, 4]];
+// const [i, , [j, k]] = nested;
+// console.log(i, j, k);
+
+// Default values in destructuring
+// const [p, q, r] = [8, 9];
+// console.log(p, q, r); // 8 9 undefined is output
+
+// const [p1 = 1, q1 = 1, r1 = 1] = [8, 9];
+// console.log(p1, q1, r1); // 8 9 1 is output
