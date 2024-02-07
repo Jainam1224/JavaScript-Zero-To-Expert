@@ -424,3 +424,42 @@ console.log(huge + " is REALLY big!!!"); // 20289830237283728378237 is REALLY bi
 console.log(11n / 3n); // 3n
 console.log(10 / 3); // 3.3333...
 */
+
+/*
+///////////////////////////////////////
+// Creating Dates
+
+// Create a date
+const now = new Date();
+console.log(now); // Wed Feb 07 2024 13:00:07 GMT+0530 (India Standard Time)
+
+console.log(new Date("Aug 02 2020 18:05:41"));
+console.log(new Date("December 24, 2015"));
+console.log(new Date(account1.movementsDates[0]));
+
+console.log(new Date(2037, 10, 19, 15, 23, 5)); // Thu Nov 19 2037 15:23:05 GMT+0530 (India Standard Time) => The month is 0 index based
+console.log(new Date(2037, 10, 31)); // Nov has 30 days so this will get autocorrect as well as: Tue Dec 01 2037 00:00:00 GMT+0530 (India Standard Time)
+
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+// Working with dates
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+
+console.log(new Date(2142256980000));
+
+console.log(Date.now());
+
+future.setFullYear(2040);
+console.log(future);
+*/
